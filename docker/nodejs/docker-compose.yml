@@ -21,6 +21,7 @@ services:
     container_name: api
     volumes:
       - ./server:/app 
+    command: bash -c "npm install && npm run start"
     tty: true
     depends_on:
       - db
